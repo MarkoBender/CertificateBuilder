@@ -1,0 +1,51 @@
+<div class="row" ng-controller="dodajOS">
+    <div class="col-md-12" style="border: 1px solid black">
+        <h1>{{message}}</h1>
+        <table class="table">
+            <tbody>
+            <tr>
+                <td>Common name:</td>
+                <td><input type="text" class="form-control" ng-model="certificate.commonName"></td>
+            </tr>
+            <tr>
+                <td>Surename:</td>
+                <td><input type="text" class="form-control" ng-model="certificate.surename"></td>
+            </tr>
+            <tr>
+                <td>Givenname:</td>
+                <td><input type="text" class="form-control" ng-model="certificate.givenname"></td>
+            </tr>
+            <tr>
+                <td>Organisation:</td>
+                <td><input type="text" class="form-control" ng-model="certificate.organisation"></td>
+            </tr>
+            <tr>
+                <td>Organisation unit:</td>
+                <td><input type="text" class="form-control" ng-model="certificate.organisationUnit"></td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td><input type="text" class="form-control" ng-model="certificate.country"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" class="form-control" ng-model="certificate.email"></td>
+            </tr>
+            <tr>
+                <td>UID:</td>
+                <td><input type="text" class="form-control" ng-model="certificate.uid"></td>
+            </tr>
+
+            <tr>
+                <td>Signed by:</td>
+                <td><select ng-model="certificate.signedBy" ng-options="ca.givenname for ca in cas"></select></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button type="button" class="btn btn-success" ng-click="add(certificate)" >Add</button></td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
